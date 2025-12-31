@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ZeD's Guitar Tuner
 
-## Getting Started
+A professional-grade, high-precision guitar tuner web application built with Next.js and modern web technologies. Experience real-time pitch detection, visual feedback, and reference tones in a beautiful, responsive interface.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Real-time Tuning**: Precise pitch detection using your device's microphone.
+- **Visual Feedback**:
+  - **Dynamic Gauge**: Smooth needle movement indicating pitch deviation.
+  - **Color Indicators**: 
+    - 🟢 **Green**: Perfect tune (within ±5 cents).
+    - 🟠 **Orange**: Correct note, fine-tuning needed.
+    - ⚪ **Neutral**: Waiting for input.
+- **Reference Tones**: Click on any of the 6 guitar strings (E2, A2, D3, G3, B3, E4) to hear the reference note.
+- **Microphone Control**: Easy Start/Stop functionality for the microphone.
+- **Modern UI/UX**:
+  - Glassmorphism effects with backdrop blur.
+  - Smooth animations and transitions.
+  - Responsive design for desktop and mobile.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: [Next.js](https://nextjs.org/) (React)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Audio Processing**: Web Audio API (Oscillators for playback, Analyzer for detection)
+- **Language**: TypeScript
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📖 Usage
 
-## Learn More
+1. **Allow Microphone Access**: When prompted, allow the browser to access your microphone.
+2. **Start Tuning**: Click the **Start Tuner** button.
+3. **Play a String**: Pluck a guitar string. The tuner will detect the note and show you how far off you are.
+   - The needle moves left (flat) or right (sharp).
+   - Aim for the center (0 cents) and the green indicator.
+4. **Reference Notes**: Tap any of the string buttons at the bottom to hear what the perfect note sounds like.
 
-To learn more about Next.js, take a look at the following resources:
+## 🌐 Browser Support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This application relies on the **Web Audio API** and **MediaStream API**. It is supported in most modern browsers, including:
+- Google Chrome
+- Mozilla Firefox
+- Safari
+- Microsoft Edge
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*Note: Microphone access requires a secure context (HTTPS) or localhost.*
